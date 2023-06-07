@@ -13,9 +13,6 @@
     - [Usage ](#usage-)
     - [Run tests ](#run-tests-)
   - [✍️ Authors ](#️-authors-)
-    - [👤 **Salwa Ballouti**:](#-salwa-ballouti)
-    - [👤 **Billal Chami**:](#-billal-chami)
-    - [👤 **Sabi Mantock**](#-sabi-mantock)
   - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
   - [💖 Show your support ](#-show-your-support-)
@@ -79,7 +76,7 @@ Clone this repository to your desired folder:
 ```
 
 ```sh
-  cd Salwa-Blog
+  cd Blog-app
 ```
 
 
