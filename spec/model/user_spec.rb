@@ -20,7 +20,7 @@ RSpec.describe User, type: :model do
 
   it 'returns the last three posts' do
     user = described_class.create(name: 'Lilly', photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
-                         bio: 'I am a full stack')
+                                  bio: 'I am a full stack')
 
     user.posts = [
       Post.new({ title: 'First', text: 'This is my first post' }),
