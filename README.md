@@ -127,7 +127,7 @@ To run tests, run the following command:
 ## ✍️ Authors <a name="authors"></a>
 
 ### 👤 **Ilyass Atlassi**:
-- GitHub: [ilyassatlass](https://github.com/ilyassatlass)
+- GitHub: [ilyassatlass](https://github.com/ilyassatlassi)
 - Twitter: [ilyass_atlassi](https://twitter.com/ilyass_atlassi)
 - LinkedIn: [Ilyass Atlassi](https://www.linkedin.com/in/ilyassatlassi/)
   
