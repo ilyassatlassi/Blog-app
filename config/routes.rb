@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   # root "articles#index"
   root 'user#index'
 
-  resources :user, only: [:show] do
+  resources :user, only: [:index,:show] do
     resources :post, only: [:index, :show]
   end
   
