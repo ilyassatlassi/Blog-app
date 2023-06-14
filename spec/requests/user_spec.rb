@@ -21,7 +21,7 @@ RSpec.describe UserController, type: :request do
   end
 
   describe 'GET #show' do
-    before { get "/user/index#{user_id}" }
+    before { get "/user/#{user_id}" }
 
     it 'returns a success response' do
       expect(response).to have_http_status(200)
