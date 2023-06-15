@@ -33,7 +33,7 @@ ul .user_details  li:nth-child(2){
 .bio{
     margin-bottom:4%;
 }
-.comments,.bio,.post{
+.bio,.post{
     width:57%;
     margin-left:3%;
     border:2px solid black;
@@ -52,9 +52,6 @@ ul .user_details  li:nth-child(2){
     float: right;
     font-weight: 600;
 }
-.comments span{
-   font-weight:600; 
-}
 .post_header{
     display:flex;
     justify-content: space-between;
@@ -67,7 +64,7 @@ a{
 .post-wrap {
     border: solid 1px;
     padding: 1rem;
-    width: 100%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -89,3 +86,31 @@ button{
     background-color: transparent;
     
 }
+
+.comment-wrap {
+    width: 90%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    border: solid 1px;
+    margin-bottom: 1rem;
+  }
+  
+  .comment-item {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  
+  .comment-author {
+    font-weight: bold;
+    font-size: 1rem;
+    color: rgb(37, 82, 82);
+    min-width: 15%;
+  }
+  
+  .comment-text {
+    font-size: 0.8rem;
+  }
