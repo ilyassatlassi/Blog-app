@@ -1,7 +1,7 @@
 <%= stylesheet_link_tag 'users' %>
 <div>
     <%= render "shared/user", user: @user %>
-    
+
    <div class="bio">
     <h2>Bio</h2>
     <%= @user.bio%>
@@ -9,7 +9,7 @@
     
     <%@user_posts.each_with_index do |post, index|%>
     <div class="post">
-    <h2>post <%=index+1%></h2>
+    <%= content_tag :h3, link_to(post.title, user_post_path(post.author, post)) %>
     <%=post.text %>
     <p>Comments:<%=post.comments_counter %>||
     Likes:<%=post.likes_counter %>

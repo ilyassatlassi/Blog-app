@@ -5,7 +5,7 @@
     <% end %>
     <% @user.posts.each do |post| %>
         <%= render "shared/post", post: post %>
-        <%= render "shared/comment", comments: post.comments%>
+        <%= render "shared/comment", comments: post.comments.last(5)%>
     <% end %>
 
     <button class="link-btn" type="button">Pagination</button>
