@@ -1,0 +1,25 @@
+<%= stylesheet_link_tag 'users' %>
+<div>
+  <%= render "shared/user" %>
+  
+   <div class="bio">
+    <h2>Bio</h2>
+    <%= @user.bio%>
+    </div>
+    
+    <%@user_posts.each_with_index do |post, index|%>
+    <div class="post">
+    <h2>post <%=index+1%></h2>
+    <%=post.text %>
+    <p>Comments:<%=post.comments_counter %>||
+    Likes:<%=post.likes_counter %>
+    </p>
+
+    
+    </div>
+    <%end%>
+   <button>
+  <%= link_to "See All Posts", user_posts_path(@user) %>
+</button>
+
+</div>

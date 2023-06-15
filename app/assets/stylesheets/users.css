@@ -1,0 +1,31 @@
+ul li{
+    list-style-type:none;
+}
+
+ul li img{
+    width:100px;
+}
+
+ul,.user_details{
+    display: flex;
+    gap:2%;
+    align-items: center;
+}
+.user_details{
+    gap:65%;
+    border-radius:7px;
+    padding: 12px;
+    width: 50%;
+    border:3px solid black
+}
+
+ul .user_details li:nth-child(1){
+    font-size: 35px;
+    font-weight: 600;
+}
+ul .user_details  li:nth-child(2){
+    align-self: flex-end;
+    margin-left:2%;
+    font-size: 20px;
+    gap:1%;
+}
