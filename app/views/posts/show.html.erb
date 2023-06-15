@@ -1,0 +1,4 @@
+<%= content_tag :section do %>
+  <%= render "shared/post", post: @post %>
+  <%= render "shared/comment", comments: @post.comments %>
+<% end %>

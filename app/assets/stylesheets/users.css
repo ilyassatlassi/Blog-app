@@ -1,0 +1,123 @@
+ul li {
+  list-style-type: none;
+}
+
+ul li img {
+  width: 100px;
+}
+
+ul,
+.user_details {
+  display: flex;
+  gap: 2%;
+  align-items: center;
+}
+
+.user_details {
+  gap: 65%;
+  border-radius: 7px;
+  padding: 12px;
+  width: 50%;
+  border: 3px solid black;
+}
+
+ul .user_details li:nth-child(1) {
+  font-size: 35px;
+  font-weight: 600;
+}
+
+ul .user_details li:nth-child(2) {
+  align-self: flex-end;
+  margin-left: 2%;
+  font-size: 20px;
+  gap: 1%;
+}
+
+.bio {
+  margin-bottom: 4%;
+}
+
+.bio,
+.post {
+  width: 57%;
+  margin-left: 3%;
+  border: 2px solid black;
+  padding: 12px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 22px;
+}
+
+.post {
+  margin-top: 5px;
+  padding-bottom: 4%;
+  height: auto;
+}
+
+.post p {
+  float: right;
+  font-weight: 600;
+}
+
+.post_header {
+  display: flex;
+  justify-content: space-between;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.post-wrap {
+  border: solid 1px;
+  padding: 1rem;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.post-info {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+button {
+  margin: 2%  30%;
+  font-size: 28px;
+  border: 4px solid black;
+  border-radius: 5px;
+  box-shadow: 12px 12px 12px black;
+  background-color: transparent;
+}
+
+.comment-wrap {
+  width: 90%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border: solid 1px;
+  margin-bottom: 1rem;
+}
+
+.comment-item {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.comment-author {
+  font-weight: bold;
+  font-size: 1rem;
+  color: rgb(37, 82, 82);
+  min-width: 15%;
+}
+
+.comment-text {
+  font-size: 0.8rem;
+}

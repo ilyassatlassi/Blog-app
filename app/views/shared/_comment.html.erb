@@ -1,0 +1,13 @@
+<%= content_tag :ul, class: "comment-wrap" do %>
+  <%= content_tag :h4, "Comments-info" %>
+  <% if comments.empty? %>
+    <%= content_tag :small, "No comments!" %>
+  <% else %>
+    <% comments.each do |comment| %>
+      <%= content_tag :li, class: "comment-item" do %>
+        <%= content_tag :span, "#{comment.author.name} :", class: "comment-author" %>
+        <%= content_tag :span, comment.text, class: "comment-desc" %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>

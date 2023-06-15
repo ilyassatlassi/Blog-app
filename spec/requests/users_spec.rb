@@ -1,11 +1,10 @@
 require 'rails_helper'
 
-RSpec.describe PostController, type: :request do
+RSpec.describe UsersController, type: :request do
   let(:user_id) { 802 }
-  let(:post_id) { 3 }
 
   describe 'GET /index' do
-    before { get "/user/#{user_id}/post" }
+    before { get '/users/' }
 
     it 'returns a success response' do
       expect(response).to be_successful
@@ -17,12 +16,12 @@ RSpec.describe PostController, type: :request do
 
     it 'includes the correct placeholder text' do
       result = response.body
-      expect(result).to include('Here is a lists of posts for a given user id')
+      expect(result).to include('Here is a lists of user')
     end
   end
 
   describe 'GET #show' do
-    before { get "/user/#{user_id}/post/#{post_id}" }
+    before { get "/users/#{user_id}" }
 
     it 'returns a success response' do
       expect(response).to have_http_status(200)
@@ -34,7 +33,7 @@ RSpec.describe PostController, type: :request do
 
     it 'includes the correct placeholder text' do
       result = response.body
-      expect(result).to include('Here is a post by id for the given user id')
+      expect(result).to include('Here is a lists of user for a given s id')
     end
   end
 end
