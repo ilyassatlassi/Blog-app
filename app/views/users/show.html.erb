@@ -1,7 +1,7 @@
 <%= stylesheet_link_tag 'users' %>
 <div>
-  <%= render "shared/user" %>
-  
+    <%= render "shared/user", user: @user %>
+    
    <div class="bio">
     <h2>Bio</h2>
     <%= @user.bio%>

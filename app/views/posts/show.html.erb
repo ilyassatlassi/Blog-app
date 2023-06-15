@@ -1,1 +1,4 @@
-<h1>Here is a post by id for the given user id</h1>
+<%= content_tag :section do %>
+  <%= render "shared/post", post: @post %>
+  <%= render "shared/comment", comments: @post.comments %>
+<% end %>

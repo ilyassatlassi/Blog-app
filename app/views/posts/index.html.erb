@@ -1,1 +1,13 @@
-<h1>Here is a lists of posts for a given user id</h1>
+  <%= render "shared/user", user: @user %>
+    
+    <% if @user.posts.empty? %>
+        <p class="not-available">No post available</p>
+    <% end %>
+    <% @user.posts.each do |post| %>
+        <%= render "shared/post", post: post %>
+        <%= render "shared/comment", comments: post.comments%>
+    <% end %>
+
+    <button class="link-btn" type="button">Pagination</button>
+
+</section>

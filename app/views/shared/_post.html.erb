@@ -1,0 +1,8 @@
+<%= content_tag :div, class: "post-wrap" do %>
+  <%= content_tag :h3, link_to(post.title, user_post_path(post.author, post), class: "post-title") %>
+  <%= content_tag :p, "#{post.text[0..200]}..." %>
+  <%= content_tag :p, class: "post-info" do %>
+    <%= content_tag :span, "Comments: #{post.comments_counter}" %>
+    <%= content_tag :span, "Likes: #{post.likes_counter || 0}".html_safe %>
+  <% end %>
+<% end %>
