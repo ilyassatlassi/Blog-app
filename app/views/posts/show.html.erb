@@ -1,20 +1,33 @@
 <%= content_tag :section do %>
   <%= content_tag :div, class: "main-container" do %>
-    <%= content_tag :header do %>
-      <%= content_tag :h2, @post.title, class: "post-title" %>
+    <%= content_tag :div do %>
+      
       <%= content_tag :div, class: "post-info" do %>
+      <%= content_tag :h2, @post.title, class: "post-title" %>
         <%= content_tag :h3, "Author: #{link_to @post.author.name, user_path(@post.author)}".html_safe, class: "post-author" %>
-        <%= content_tag :span, "Comments: #{@post.comments_counter || 0}" %>
-        <%= content_tag :span, "Likes: #{@post.likes_counter || 0}" %>
       <% end %>
     <% end %>
-    <%= content_tag :p, @post.text, class: "post-content" %>
+    <%= content_tag :div, class: "post-info" do %>
+    <%= content_tag :p, @post.text, class: "post-content" %> 
+        <%= content_tag :div do %>
+         <%= content_tag :span, "Comments: #{@post.comments_counter || 0}" %>
+        <%= content_tag :span, "Likes: #{@post.likes_counter || 0}" %>
+        <% end %>
+     <% end %>
   <% end %>
   <div class="post-btn-bar">
  <%= form_with model: [@current, @post, Like.new], url: user_post_likes_path(@post.author, @post), method: :post do |f| %>
   <%= content_tag :button, "Give Like", type: "submit", class: "post-btn" %>
 <% end %>
-  <%= content_tag :a, "Add Comment", href: new_user_post_comment_path(@post.author, @post), class: "post-btn" %>
+  <%# <%= content_tag :button, link_to "Add Comment", new_user_post_comment_path(@post.author, @post), class: "post-btn" %> 
+  <button>
+  <%= link_to "Add Comment", new_user_post_comment_path(@post.author, @post) %>
+  </button>
+
+  <button>
+      <%= link_to "Add Post", new_user_post_path(@current) %>
+    </button>
+  
 </div>
 
 <% if flash[:success] %>

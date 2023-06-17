@@ -1,8 +1,9 @@
 
+<div class= "add_comment">
+
+
+<%= form_with(model: @comment, url: user_post_comments_path(@post),class: "comment-input", local: true) do |form| %>
 <h2>Add a Comment</h2>
-
-<%= form_with(model: @comment, url: user_post_comments_path(@post), local: true) do |form| %>
-
   <div class='comment-input'>
     <%= form.label :text %>
     <%= form.text_area :text, placeholder: 'Enter your comment', class: 'comment-area' %>
@@ -10,3 +11,4 @@
     <%= form.submit 'Add Comment', class: 'comment-btn' %>
   </div>
 <% end %>
+</div>
