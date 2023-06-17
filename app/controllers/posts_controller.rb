@@ -9,7 +9,6 @@ class PostsController < ApplicationController
   def show
     @post = @user.posts.find(params[:id])
     @current = current_user
-
   end
 
   def new

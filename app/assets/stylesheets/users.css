@@ -135,7 +135,7 @@ button {
   height: 100vh;
 }
 
-.comment-input{
+.comment-input {
   display: flex;
   flex-direction: column;
 }
