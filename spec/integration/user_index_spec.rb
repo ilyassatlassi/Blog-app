@@ -2,8 +2,8 @@ require 'rails_helper'
 
 RSpec.describe 'User index page', type: :feature do
 
-  let!(:user1) { User.create(name: 'Salwa', bio: 'Developer', photo: 'www.unsplash.com/user/1', posts_counter: 4) }
-  let!(:user2) { User.create(name: 'Anas', bio: 'Pentester', photo: 'www.unsplash.com/user/2', posts_counter: 10) }
+  let!(:user1) { User.create(name: 'Ilyass', bio: 'Developer', photo: 'www.unsplash.com/user/1', posts_counter: 4) }
+  let!(:user2) { User.create(name: 'Atlassi', bio: 'Pentester', photo: 'www.unsplash.com/user/2', posts_counter: 10) }
 
   before do
     visit users_path
