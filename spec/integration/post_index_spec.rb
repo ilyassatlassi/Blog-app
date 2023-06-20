@@ -14,7 +14,6 @@ RSpec.describe 'Post index page', type: :feature do
   end
 
   describe 'Page content' do
-
     it "Display user's name" do
       expect(page).to have_content(user.name)
     end
@@ -24,7 +23,7 @@ RSpec.describe 'Post index page', type: :feature do
     end
 
     it 'Display number of posts' do
-        expect(page).to have_content("Number of posts #{user.posts_counter}")
+      expect(page).to have_content("Number of posts #{user.posts_counter}")
     end
 
     it 'Display all post titles' do

@@ -34,17 +34,17 @@ RSpec.describe 'Post show page', type: :feature do
     it 'Display comment counts for each post' do
       expect(page).to have_content("Comments: #{post.comments_counter}")
     end
-    
+
     it 'Display total likes for a post' do
       expect(page).to have_content("Likes: #{post.likes_counter}")
     end
 
     it 'should have a button for Add Comment' do
-        expect(page).to have_button('Add Comment')
+      expect(page).to have_button('Add Comment')
     end
 
     it 'should have a button for Give Like' do
-        expect(page).to have_button('Give Like')
-      end
-  end
+      expect(page).to have_button('Give Like')
+    end
+  end
 end
