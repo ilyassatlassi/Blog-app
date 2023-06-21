@@ -1,7 +1,4 @@
-# rubocop:disable Layout/EndOfLine
 require 'rails_helper'
-# rubocop:enable Layout/EndOfLine
-
 RSpec.describe 'Post show page', type: :feature do
   let!(:user) { User.create(name: 'Ilyass', bio: 'Developer', photo: 'www.unsplash.com/user/1') }
   let!(:post) { Post.create(title: 'Post1', text: 'First post', author: user) }
