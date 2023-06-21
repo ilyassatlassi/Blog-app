@@ -126,6 +126,12 @@ To run tests, run the following command:
 
 ## ✍️ Authors <a name="authors"></a>
 
+👤 **Author1**
+ *[HERMON GEBRE]*
+ 
+- GitHub: [@githubhandle](https://github.com/HERMON-1995)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/hermon-gebre/)
+
 ### 👤 **Ilyass Atlassi**:
 - GitHub: [ilyassatlass](https://github.com/ilyassatlassi)
 - Twitter: [ilyass_atlassi](https://twitter.com/ilyass_atlassi)
