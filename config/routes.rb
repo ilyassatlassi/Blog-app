@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   # get 'post/index'
   # get 'post/show'
   # get 'user/index'
