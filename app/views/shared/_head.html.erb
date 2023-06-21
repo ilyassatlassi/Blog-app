@@ -1,0 +1,14 @@
+<%= content_tag :header, class: "main-header" do %>
+  <%= content_tag :div, class: "brand" do %>
+    <%= link_to "IlyassBlog", root_path %>
+  <% end %>
+
+  <% if user_signed_in? %>
+        <div class="profile-container">
+            <%= link_to current_user.name, user_path(current_user) %>
+            <span class="user-icon"><%= current_user.name[0].upcase %></span>
+        </div>
+    <% else %>
+        <%= link_to 'Register New User', new_user_registration_path, class: "auth-btn" %>
+    <% end %>
+<% end %>

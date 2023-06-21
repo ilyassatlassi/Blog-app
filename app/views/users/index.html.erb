@@ -1,6 +1,15 @@
 <%= stylesheet_link_tag 'users' %>
-<div>
+<section>
+<%= render "shared/head", current_user: @current_user %>
+    <div class="tool-bar">
+    <% if user_signed_in? %>
+        <%= link_to "+ New Post", new_user_post_path(@current_user), class: "new-post-btn" %>
+    <% else %>
+        <p>Join Us!</p>
+    <% end %>
+    </div>
+    <div class="users-container">
 <% @users.each do |user| %>
     <%= render "shared/user", user: user %>
 <% end %>
-</div>
+</section>
