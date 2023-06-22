@@ -13,10 +13,15 @@
          <%= content_tag :span, "Comments: #{@post.comments_counter || 0}" %>
         <%= content_tag :span, "Likes: #{@post.likes_counter || 0}" %>
         <% end %>
+        <% if can? :destroy, @post %>
+          <%= form_with model: [@current_user, @post], method: :delete do |f| %>
+            <%= f.submit "Delete", class: "btn warn-btn" %>
+          <% end %>
+        <% end %>
      <% end %>
   <% end %>
   <div class="post-btn-bar">
- <%= form_with model: [@current, @post, Like.new], url: user_post_likes_path(@post.author, @post), method: :post do |f| %>
+ <%= form_with model: [@current_user, @post, Like.new], url: user_post_likes_path(@post.author, @post), method: :post do |f| %>
   <%= content_tag :button, "Give Like", type: "submit", class: "post-btn" %>
 <% end %>
   <%# <%= content_tag :button, link_to "Add Comment", new_user_post_comment_path(@post.author, @post), class: "post-btn" %> 
@@ -29,5 +34,5 @@
 <% if flash[:success] %>
   <%= content_tag :div, flash[:success], class: "alert alert-success" %>
 <% end %>
-<%= render "shared/comment", comments: @post.comments %>
+<%= render "shared/comment", comments: @post.comments, current_user: @current_user %>
 <% end %>

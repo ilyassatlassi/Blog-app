@@ -205,3 +205,23 @@ button {
   border-radius: 50%;
   border: solid 2px #f5c6cb;
 }
+
+.warn-btn {
+  background-color: #ffe7e7;
+  border: 1px solid #fee0e0;
+  border-radius: 11px;
+  color: #d33a2c;
+  font-weight: 700;
+  transition: all 0.2s ease-in-out;
+}
+
+.warn-btn:active {
+  background-color: #d33a2c;
+  box-shadow: rgba(0, 0, 0, 0.12) 0 1px 3px 0 inset;
+  color: #fff;
+}
+
+.warn-btn:hover {
+  background-color: #ffe3e3;
+  border-color: #faa4a4;
+}

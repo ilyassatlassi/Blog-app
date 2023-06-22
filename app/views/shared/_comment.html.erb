@@ -8,6 +8,13 @@
         <%= content_tag :span, "#{comment.author.name} :", class: "comment-author" %>
         <%= content_tag :span, comment.text, class: "comment-desc" %>
       <% end %>
+      <% if can? :destroy, comment %>
+          <%= content_tag :div, class: "remove-comment" do %>
+            <%= form_with model: [@current_user, comment.post, comment], method: :delete do |f| %>
+              <%= f.submit "Remove", class: "btn warn-btn" %>
+            <% end %>
+          <% end %>
+      <% end %>
     <% end %>
   <% end %>
 <% end %>
